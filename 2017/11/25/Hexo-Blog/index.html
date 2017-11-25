@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://blog.deadlinex.org">
-  <title>使用Hexo和GithubPages搭建自己的个人博客 | 个人博客</title>
+  <title>使用Hexo和Github Pages搭建自己的个人博客 | 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一直想搭建一个自己的个人博客，所以在网上查找资料一步一步的将自己的博客搭建起来了，中间遇到一些问题，在这里做个总结，也算是为想搭建自己博客的人少走一些弯路；最后给大家一些分享一些其他人的文章。（这个有点花费时间，大家提前有个心理准备）">
-<meta name="keywords" content="Hexo,GithubPages">
+<meta name="keywords" content="Hexo,Github Pages">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Hexo和GithubPages搭建自己的个人博客">
+<meta property="og:title" content="使用Hexo和Github Pages搭建自己的个人博客">
 <meta property="og:url" content="http://blog.deadlinex.org/2017/11/25/Hexo-Blog/index.html">
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="一直想搭建一个自己的个人博客，所以在网上查找资料一步一步的将自己的博客搭建起来了，中间遇到一些问题，在这里做个总结，也算是为想搭建自己博客的人少走一些弯路；最后给大家一些分享一些其他人的文章。（这个有点花费时间，大家提前有个心理准备）">
-<meta property="og:updated_time" content="2017-11-25T15:33:04.224Z">
+<meta property="og:updated_time" content="2017-11-25T15:50:07.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Hexo和GithubPages搭建自己的个人博客">
+<meta name="twitter:title" content="使用Hexo和Github Pages搭建自己的个人博客">
 <meta name="twitter:description" content="一直想搭建一个自己的个人博客，所以在网上查找资料一步一步的将自己的博客搭建起来了，中间遇到一些问题，在这里做个总结，也算是为想搭建自己博客的人少走一些弯路；最后给大家一些分享一些其他人的文章。（这个有点花费时间，大家提前有个心理准备）">
   
     <link rel="alternative" href="/atom.xml" title="个人博客" type="application/atom+xml">
@@ -161,7 +161,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用Hexo和GithubPages搭建自己的个人博客
+      使用Hexo和Github Pages搭建自己的个人博客
     </h1>
   
 
@@ -181,7 +181,7 @@
 <li>安装Git</li>
 <li>申请Github账号<br>以上过程不再细说，大家有不懂的地方可以去看这篇<a href="http://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener">简书</a>。</li>
 </ol>
-<h2 id="准备开始"><a href="#准备开始" class="headerlink" title="准备开始"></a>准备开始</h2><h3 id="配置GithubPages"><a href="#配置GithubPages" class="headerlink" title="配置GithubPages"></a>配置GithubPages</h3><p>登录Github，新建一个仓库new repository，仓库的名字为yourname.github.io，yourname和你GitHub账户名保持一致，其实不保持一致也没有问题，但是最后生成的地址不是<a href="https://yourname.github.io.git,而是https://yourname.github.io.git/name。创建成功之后，点击右上侧的settings，找到Github" target="_blank" rel="noopener">https://yourname.github.io.git,而是https://yourname.github.io.git/name。创建成功之后，点击右上侧的settings，找到Github</a> Pages设置，Source选项选择master branch点击Save</p>
+<h2 id="准备开始"><a href="#准备开始" class="headerlink" title="准备开始"></a>准备开始</h2><h3 id="配置Github-Pages"><a href="#配置Github-Pages" class="headerlink" title="配置Github Pages"></a>配置Github Pages</h3><p>登录Github，新建一个仓库new repository，仓库的名字为yourname.github.io，yourname和你GitHub账户名保持一致，其实不保持一致也没有问题，但是最后生成的地址不是<a href="https://yourname.github.io,而是https://yourname.github.io/name。创建成功之后，点击右上侧的settings，找到Github" target="_blank" rel="noopener">https://yourname.github.io,而是https://yourname.github.io/name。创建成功之后，点击右上侧的settings，找到Github</a> Pages设置，Source选项选择master branch点击Save</p>
 <p>打开Git Bash输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span></span><br><span class="line">$ git config --global user.email <span class="string">"useremail"</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></p>
 <p>如果显示’No such file or directory’那么直接输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@email.com"</span></span><br></pre></td></tr></table></figure></p>
 <p>按3个回车，密码为空。在C:\Users\Administrator.ssh下，得到两个文件id_rsa和id_rsa.pub。打开id_rsa.pub，复制全文。打开<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">SSH</a> ，Add SSH key，粘贴进去，点击保存。<br>如果不是，则输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l</span><br><span class="line">$ mkdir key_backup </span><br><span class="line">$ cp id_rsa* key_backup </span><br><span class="line">$ rm id_rsa*</span><br></pre></td></tr></table></figure></p>
@@ -195,7 +195,7 @@
 <p>修改为<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"><span class="code">    type: git</span></span><br><span class="line"><span class="code">    repo: https://github.com/yuorname/yuorname.github.io.git</span></span><br><span class="line"><span class="code">    branch: master</span></span><br></pre></td></tr></table></figure></p>
 <p>输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
 <p>在本地预览效果<br>发布线上，输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>打开浏览器，输入&gt;<a href="https://yuorname.github.io.git查看效果" target="_blank" rel="noopener">https://yuorname.github.io.git查看效果</a></p>
+<p>打开浏览器，输入&gt; <a href="https://yuorname.github.io查看效果" target="_blank" rel="noopener">https://yuorname.github.io查看效果</a></p>
 
       
 
@@ -234,7 +234,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">GithubPages</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Github Pages</a>
         		</li>
       		
 		</ul>
@@ -426,7 +426,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GithubPages</a>
+                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
               </li>
             
             <div class="clearfix"></div>
